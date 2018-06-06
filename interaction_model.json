@@ -1,0 +1,141 @@
+{"interactionModel": {
+    "languageModel": {
+      "invocationName": "presence",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.LoopOffIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.LoopOnIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ShuffleOffIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ShuffleOnIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": []
+        },
+        {
+          "name": "StartMeditationIntent",
+          "slots": [
+            {
+              "name": "minutes",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "I have {minutes} minutes",
+                "I have {minutes}",
+                "{minutes} minutes",
+                "{minutes}"
+              ]
+            }
+          ],
+          "samples": [
+            "I have {minutes}",
+            "I have {minutes} minutes",
+            "meditate for {minutes} minutes",
+            "meditate for {minutes}",
+            "{minutes} minutes",
+            "{minutes}",
+            "I want to meditate",
+            "I want to meditate for {minutes} minutes"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "StartMeditationIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "minutes",
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1296091697354.459431019419"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1296091697354.459431019419",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "How much time?"
+          },
+          {
+            "type": "PlainText",
+            "value": "How much time do you have?"
+          },
+          {
+            "type": "PlainText",
+            "value": "How long?"
+          },
+          {
+            "type": "PlainText",
+            "value": "How long would you like to meditate for?"
+          },
+          {
+            "type": "PlainText",
+            "value": "How many minutes?"
+          },
+          {
+            "type": "PlainText",
+            "value": "For how long?"
+          }
+        ]
+      }
+    ]
+  }
+}
